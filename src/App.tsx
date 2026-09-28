@@ -26,8 +26,8 @@ type LinkItem = {
 const siteConfig = {
   logoUrl: "/uffo-logo.svg",
   name: "UFFO studios",
-  tagline: "Estudio creativo para personas y marcas",
-  footerUrl: "https://uffostudios.com",
+  tagline: "Personas creando para personas.",
+  footerUrl: "https://uffostudios.com/",
   themes: {
     dark: {
       background: "#0A0A0A",
@@ -44,7 +44,7 @@ const siteConfig = {
     },
     light: {
       background: "#F6F5F0",
-      glow: "#D8C0FF",
+      glow: "#d3eba9",
       surface: "#FFFFFF",
       border: "rgba(0, 0, 0, 0.08)",
       text: "#0A0A0A",
@@ -60,12 +60,12 @@ const siteConfig = {
     {
       title: "Contanos tu proyecto",
       icon: "cursor",
-      url: "https://uffostudios.com",
+      url: "https://uffostudios.com/contact",
     },
     {
       title: "Chateá con nosotros",
       icon: "whatsapp",
-      url: "https://wa.me/",
+      url: "https://wa.me/+5492604002739",
     },
     {
       title: "Visitá nuestra web",
@@ -76,19 +76,19 @@ const siteConfig = {
       title: "Portfolio",
       icon: "behance",
       subtitle: "Behance · Portfolio",
-      url: "https://www.behance.net/",
+      url: "https://www.behance.net/uffo",
     },
     {
       title: "Seguinos en Instagram",
       icon: "instagram",
       subtitle: "Instagram · Profile",
-      url: "https://www.instagram.com/",
+      url: "https://www.instagram.com/uffostudios",
     },
     {
       title: "¡Inspirate acá!",
       icon: "pinterest",
       subtitle: "Pinterest · Profile",
-      url: "https://www.pinterest.com/",
+      url: "https://www.pinterest.com/uffostudios",
     },
   ] satisfies LinkItem[],
 };
@@ -113,9 +113,10 @@ function Icon({ name }: { name: IconName }) {
 
   if (name === "asterisk") {
     return (
-      <svg {...common} viewBox="0 0 24 24">
-        <path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
-      </svg>
+      <img src="src/imports/Uffito_UFFO_verde_sombra.svg" alt="logo" style={{ width: "80%", height: "auto" }} />
+      // <svg {...common} viewBox="0 0 24 24">
+        // <path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+      // </svg>
     );
   }
   if (name === "sun") {
@@ -294,7 +295,8 @@ export default function App() {
 
         <header className="brand-header">
           <div className="avatar">
-            <img src={theme === "light" ? avatarMorado : avatarVerde} alt={`Logo de ${siteConfig.name}`} />
+            <img src="public/uffo-logo.svg" alt="logo" style={{ width: "60%", height: "auto" }} />
+            {/* <img src={theme === "light" ? avatarMorado : avatarVerde} alt={`Logo de ${siteConfig.name}`} /> */}
           </div>
           <h1>{siteConfig.name}</h1>
           <p>{siteConfig.tagline}</p>

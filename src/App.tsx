@@ -295,8 +295,7 @@ export default function App() {
 
         <header className="brand-header">
           <div className="avatar">
-            <img src="public/uffo-logo.svg" alt="logo" style={{ width: "60%", height: "auto" }} />
-            {/* <img src={theme === "light" ? avatarMorado : avatarVerde} alt={`Logo de ${siteConfig.name}`} /> */}
+            <img src={theme === "light" ? avatarMorado : avatarVerde} alt={`Logo de ${siteConfig.name}`} />
           </div>
           <h1>{siteConfig.name}</h1>
           <p>{siteConfig.tagline}</p>
